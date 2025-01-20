@@ -20,3 +20,13 @@ form.addEventListener("submit", (e) => {
   outputDiv.innerHTML = output;
 });
 
+form.addEventListener("reset", () => {
+  // Clear output span
+  outputDiv.innerHTML = "";
+
+  // Clear input fields
+  const inputFields = document.querySelectorAll("#employee-form input");
+  inputFields.forEach((field) => {
+    field.value = "";
+  });
+});
